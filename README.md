@@ -131,11 +131,11 @@ LOG.info(
 
 Responder:
 
-1. ¿Qué información adicional muestra el mensaje del Logger?
-2. ¿Aparece la fecha/hora?
-3. ¿Aparece el nombre de la clase?
-4. ¿Aparece el nivel del mensaje?
-5. ¿Cuál de los dos mecanismos proporciona más información para diagnosticar un problema?
+1. ¿Qué información adicional muestra el mensaje del Logger? El mensaje logger muestra la fecha, hora y clase donde ocurre, aparte el texto es rojo y en el println solo muestra el texto normal y corriente.
+2. ¿Aparece la fecha/hora? Si, aparece fecha y hora, mientras que en el otro solo aparece el texto del print.
+3. ¿Aparece el nombre de la clase? Si, a diferencia del otro.
+4. ¿Aparece el nivel del mensaje? Si, aparece al inicio del mensaje, despues de la hora en letras mayusculas.
+5. ¿Cuál de los dos mecanismos proporciona más información para diagnosticar un problema? Proporciona mas informacion  el LOG.info para poder saber mas del problema que un simple println
 
 
 ## Parte II. Niveles de logging
@@ -160,9 +160,7 @@ Los niveles, de mayor a menor importancia, son:
 
 Agregar:
 
-```java
-import java.util.logging.Level;
-import java.util.logging.Logger;
+```java.util.logging.Logger;
 
 public class ProcesadorCalificaciones {
 
@@ -177,6 +175,8 @@ public class ProcesadorCalificaciones {
             Level.INFO,
             "Aplicación iniciada"
         );
+import java.util.logging.Level;
+import java
 
         LOG.log(
             Level.WARNING,
