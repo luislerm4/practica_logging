@@ -14,33 +14,66 @@ public class ProcesadorCalificaciones {
                     ProcesadorCalificaciones.class.getName()
             );
 
-    public static void main(String[] args) {
-
-        LOG.setUseParentHandlers(false);
-
-        ConsoleHandler consola = new ConsoleHandler();
-        consola.setLevel(Level.ALL);
-        LOG.addHandler(consola);
+    private static void configurarLogger() {
 
         try {
-            FileHandler archivoLog = new FileHandler("aplicacion.log");
-            SimpleFormatter formato = new SimpleFormatter();
-            archivoLog.setFormatter(formato);
-            LOG.addHandler(archivoLog);
-        } catch (IOException e) {
-            System.err.println("No fue posible crear el log");
-        }
 
-        LOG.setLevel(Level.ALL);
+            LOG.setUseParentHandlers(false);
+
+            LOG.setLevel(Level.FINE);
+
+            ConsoleHandler consola = new ConsoleHandler();
+
+            consola.setLevel(Level.INFO);
+
+            LOG.addHandler(
+                    consola
+            );
+
+            FileHandler archivo =
+                    new FileHandler(
+                            "procesador.log"
+                    );
+
+            archivo.setLevel(
+                    Level.FINE
+            );
+
+            archivo.setFormatter(
+                    new SimpleFormatter()
+            );
+
+            LOG.addHandler(
+                    archivo
+            );
+
+        } catch (IOException e) {
+
+            System.err.println(
+                    "No fue posible configurar logging: "
+                            + e.getMessage()
+            );
+        }
+    }
+
+    public static void main(String[] args) {
+
+        configurarLogger();
 
         if (args.length == 0) {
-            LOG.severe("No se especificó archivo de entrada");
+
+            LOG.severe(
+                    "No se especificó archivo de entrada"
+            );
+
             return;
         }
 
         String archivo = args[0];
 
-        LOG.info("Archivo recibido: " + archivo);
+        LOG.info(
+                "Archivo recibido: " + archivo
+        );
 
         try (
                 BufferedReader lector =
@@ -52,15 +85,23 @@ public class ProcesadorCalificaciones {
             String linea;
             int contador = 0;
 
-            while ((linea = lector.readLine()) != null) {
+            while (
+                    (linea = lector.readLine()) != null
+            ) {
 
                 contador++;
 
                 try {
 
-                    int calificacion = Integer.parseInt(linea.trim());
+                    int calificacion =
+                            Integer.parseInt(
+                                    linea.trim()
+                            );
 
-                    if (calificacion < 0 || calificacion > 100) {
+                    if (
+                            calificacion < 0
+                                    || calificacion > 100
+                    ) {
 
                         LOG.warning(
                                 "Calificación fuera de rango: "
@@ -84,7 +125,10 @@ public class ProcesadorCalificaciones {
                 }
             }
 
-            LOG.info("Registros procesados: " + contador);
+            LOG.info(
+                    "Registros procesados: "
+                            + contador
+            );
 
         } catch (IOException e) {
 

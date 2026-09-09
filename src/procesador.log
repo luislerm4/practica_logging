@@ -1,0 +1,14 @@
+sep 09, 2026 4:04:53 P.M. ProcesadorCalificaciones main
+INFO: Archivo recibido: ..\calificaciones.txt
+sep 09, 2026 4:04:53 P.M. ProcesadorCalificaciones main
+FINE: Calificación válida: 90
+sep 09, 2026 4:04:53 P.M. ProcesadorCalificaciones main
+WARNING: Calificación fuera de rango: -5
+sep 09, 2026 4:04:53 P.M. ProcesadorCalificaciones main
+WARNING: Dato no numérico: abc
+sep 09, 2026 4:04:53 P.M. ProcesadorCalificaciones main
+WARNING: Calificación fuera de rango: 105
+sep 09, 2026 4:04:53 P.M. ProcesadorCalificaciones main
+FINE: Calificación válida: 80
+sep 09, 2026 4:04:53 P.M. ProcesadorCalificaciones main
+INFO: Registros procesados: 5
