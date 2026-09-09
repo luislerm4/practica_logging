@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.logging.ConsoleHandler;
+import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -20,22 +21,23 @@ public class ProcesadorCalificaciones {
         consola.setLevel(Level.ALL);
         LOG.addHandler(consola);
 
+        try {
+            FileHandler archivoLog = new FileHandler("Logging.xml");
+            LOG.addHandler(archivoLog);
+        } catch (IOException e) {
+            System.err.println("No fue posible crear el log");
+        }
+
         LOG.setLevel(Level.ALL);
 
         if (args.length == 0) {
-
-            LOG.severe(
-                    "No se especificó archivo de entrada"
-            );
-
+            LOG.severe("No se especificó archivo de entrada");
             return;
         }
 
         String archivo = args[0];
 
-        LOG.info(
-                "Archivo recibido: " + archivo
-        );
+        LOG.info("Archivo recibido: " + archivo);
 
         try (
                 BufferedReader lector =
@@ -47,23 +49,15 @@ public class ProcesadorCalificaciones {
             String linea;
             int contador = 0;
 
-            while (
-                    (linea = lector.readLine()) != null
-            ) {
+            while ((linea = lector.readLine()) != null) {
 
                 contador++;
 
                 try {
 
-                    int calificacion =
-                            Integer.parseInt(
-                                    linea.trim()
-                            );
+                    int calificacion = Integer.parseInt(linea.trim());
 
-                    if (
-                            calificacion < 0
-                                    || calificacion > 100
-                    ) {
+                    if (calificacion < 0 || calificacion > 100) {
 
                         LOG.warning(
                                 "Calificación fuera de rango: "
@@ -87,10 +81,7 @@ public class ProcesadorCalificaciones {
                 }
             }
 
-            LOG.info(
-                    "Registros procesados: "
-                            + contador
-            );
+            LOG.info("Registros procesados: " + contador);
 
         } catch (IOException e) {
 
