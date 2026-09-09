@@ -316,9 +316,9 @@ java ProcesadorCalificaciones inexistente.txt
 
 Identificar:
 
-- mensajes `INFO`;
-- mensajes `SEVERE`;
-- mensajes `FINE`.
+- mensajes `INFO`; Aparece al recibir el archivo y al terminar de leerlo
+- mensajes `SEVERE`; Aparece si no pasas ningun archivo o si el archivo no existe
+- mensajes `FINE`; Muestra el seguimiento linea por linea
 
 
 ## Parte IV. Filtrado por niveles
@@ -414,12 +414,12 @@ LOG.setLevel(Level.ALL);
 Completar la siguiente tabla indicando que mensajes se muestran en cada configuración:
 
 | Configuración | SEVERE | WARNING | INFO | FINE |
-|---|---|---|---|---|
-| `SEVERE` | | | | |
-| `WARNING` | | | | |
-| `INFO` | | | | |
-| `FINE` | | | | |
-| `ALL` | | | | |
+|---|--------|---------|------|------|
+| `SEVERE` | Si     | No      | No   | No   |
+| `WARNING` | Si     | Si      | No   | No   |
+| `INFO` | Si     | Si      | Si   | No   |
+| `FINE` | Si     | Si      | Si   | Si   |
+| `ALL` | Si     | Si      | Si   | Si   |
 
 
 
