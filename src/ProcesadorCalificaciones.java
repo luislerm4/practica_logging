@@ -94,9 +94,10 @@ public class ProcesadorCalificaciones {
 
         } catch (IOException e) {
 
-            LOG.severe(
-                    "Error al procesar archivo: "
-                            + e.getMessage()
+            LOG.log(
+                    Level.SEVERE,
+                    "Error durante la lectura del archivo",
+                    e
             );
         }
     }
