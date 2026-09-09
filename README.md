@@ -211,14 +211,14 @@ LOG.finest("Traza extremadamente detallada");
 En la siguiente tabla, signar un nivel apropiado a cada situación.
 
 | Situación | Nivel propuesto |
-|---|---|
-| La aplicación inicia correctamente | |
-| No existe el archivo solicitado | |
-| Se procesaron 250 registros | |
-| Se encontró una calificación inválida | |
-| Se cargó `application.properties` | |
-| Se desea conocer el valor de una variable durante depuración | |
-| La aplicación no puede continuar | |
+|---|-----------------|
+| La aplicación inicia correctamente | INFO            |
+| No existe el archivo solicitado | SEVERE          |
+| Se procesaron 250 registros | WARNING         |
+| Se encontró una calificación inválida | WARNING         |
+| Se cargó `application.properties` | INFO            |
+| Se desea conocer el valor de una variable durante depuración | FINE            |
+| La aplicación no puede continuar | SEVERE          |
 
 
 
