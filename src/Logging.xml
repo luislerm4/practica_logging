@@ -2,9 +2,9 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2026-09-09T22:57:03.342315300Z</date>
-  <millis>1788994623342</millis>
-  <nanos>315300</nanos>
+  <date>2026-09-09T23:00:06.442588700Z</date>
+  <millis>1788994806442</millis>
+  <nanos>588700</nanos>
   <sequence>0</sequence>
   <logger>ProcesadorCalificaciones</logger>
   <level>INFO</level>
@@ -14,9 +14,9 @@
   <message>Archivo recibido: ..\calificaciones.txt</message>
 </record>
 <record>
-  <date>2026-09-09T22:57:03.429121300Z</date>
-  <millis>1788994623429</millis>
-  <nanos>121300</nanos>
+  <date>2026-09-09T23:00:06.560619400Z</date>
+  <millis>1788994806560</millis>
+  <nanos>619400</nanos>
   <sequence>1</sequence>
   <logger>ProcesadorCalificaciones</logger>
   <level>FINE</level>
@@ -26,9 +26,9 @@
   <message>Calificación válida: 90</message>
 </record>
 <record>
-  <date>2026-09-09T22:57:03.432278800Z</date>
-  <millis>1788994623432</millis>
-  <nanos>278800</nanos>
+  <date>2026-09-09T23:00:06.562690300Z</date>
+  <millis>1788994806562</millis>
+  <nanos>690300</nanos>
   <sequence>2</sequence>
   <logger>ProcesadorCalificaciones</logger>
   <level>WARNING</level>
@@ -38,9 +38,9 @@
   <message>Calificación fuera de rango: -5</message>
 </record>
 <record>
-  <date>2026-09-09T22:57:03.433832600Z</date>
-  <millis>1788994623433</millis>
-  <nanos>832600</nanos>
+  <date>2026-09-09T23:00:06.564248100Z</date>
+  <millis>1788994806564</millis>
+  <nanos>248100</nanos>
   <sequence>3</sequence>
   <logger>ProcesadorCalificaciones</logger>
   <level>WARNING</level>
@@ -50,9 +50,9 @@
   <message>Dato no numérico: abc</message>
 </record>
 <record>
-  <date>2026-09-09T22:57:03.435394600Z</date>
-  <millis>1788994623435</millis>
-  <nanos>394600</nanos>
+  <date>2026-09-09T23:00:06.565819600Z</date>
+  <millis>1788994806565</millis>
+  <nanos>819600</nanos>
   <sequence>4</sequence>
   <logger>ProcesadorCalificaciones</logger>
   <level>WARNING</level>
@@ -62,9 +62,9 @@
   <message>Calificación fuera de rango: 105</message>
 </record>
 <record>
-  <date>2026-09-09T22:57:03.435394600Z</date>
-  <millis>1788994623435</millis>
-  <nanos>394600</nanos>
+  <date>2026-09-09T23:00:06.566876900Z</date>
+  <millis>1788994806566</millis>
+  <nanos>876900</nanos>
   <sequence>5</sequence>
   <logger>ProcesadorCalificaciones</logger>
   <level>FINE</level>
@@ -74,9 +74,9 @@
   <message>Calificación válida: 80</message>
 </record>
 <record>
-  <date>2026-09-09T22:57:03.440053800Z</date>
-  <millis>1788994623440</millis>
-  <nanos>53800</nanos>
+  <date>2026-09-09T23:00:06.573044200Z</date>
+  <millis>1788994806573</millis>
+  <nanos>44200</nanos>
   <sequence>6</sequence>
   <logger>ProcesadorCalificaciones</logger>
   <level>INFO</level>
